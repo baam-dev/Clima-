@@ -15,9 +15,13 @@ class WeatherViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var searchTextField: UITextField!
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // report back to view controller
+        
+        // the delegate of this textField is going to be self = current class = WeatherViewController
+        //
         searchTextField.delegate = self
     }
     
@@ -26,6 +30,7 @@ class WeatherViewController: UIViewController, UITextFieldDelegate {
         print(searchTextField.text!)
         
     }
+    
     // responsible for return btn, the button will work like search btn
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         searchTextField.endEditing(true)
@@ -45,7 +50,6 @@ class WeatherViewController: UIViewController, UITextFieldDelegate {
     
     // clear the input field after
     func textFieldDidEndEditing(_ textField: UITextField) {
-        
         searchTextField.text = ""
     }
 }
