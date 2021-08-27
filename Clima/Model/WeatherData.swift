@@ -22,7 +22,7 @@ struct Main: Decodable {
 }
 // weather is an array in JSON file
 struct Weather: Decodable {
-    let description: String
+    let id: Int
 }
 
 struct sys: Decodable {
