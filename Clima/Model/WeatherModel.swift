@@ -14,13 +14,12 @@ struct WeatherModel {
     let temperature: Double
     
     
-    // computed propertycoditionName
+    // computed property coditionName
     var temperatureString: String {
         return String(format: "%.1f", temperature)
     }
     
     var coditionName: String {
-        
         switch conditionId {
                 case 200...232:
                     return "cloud.bolt"

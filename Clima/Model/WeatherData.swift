@@ -9,24 +9,21 @@
 import Foundation
 
 // this is the top level of that JSON file
-struct WeatherData: Decodable {
+// typealias: Codable
+struct WeatherData: Codable {
     let name: String
     let main: Main
     let weather: [Weather]
-    let sys: sys
 }
 
 // mail is a object in JSON file
-struct Main: Decodable {
+struct Main: Codable {
     let temp: Double
 }
 // weather is an array in JSON file
-struct Weather: Decodable {
+struct Weather: Codable {
     let id: Int
 }
 
-struct sys: Decodable {
-    let country: String
-}
 
 
